@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sudoku
 
-## Getting Started
+Application Sudoku developpee avec Next.js (App Router), React et TypeScript.
 
-First, run the development server:
+Site en production: [sudoku.arthurp.fr](https://sudoku.arthurp.fr)
+
+## Fonctionnalites
+
+- Generation de grilles Sudoku.
+- Interface web simple et rapide a charger.
+- Build de production via Next.js.
+
+## Stack technique
+
+- Next.js 16
+- React 19
+- TypeScript
+- ESLint
+
+## Lancer en local
+
+Prerequis:
+
+- Node.js 20+
+- npm
+
+Installation et demarrage:
+
+```bash
+npm install
+npm run dev
+```
+
+Application disponible sur [http://localhost:3000](http://localhost:3000).
+
+## Scripts utiles
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run start
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Lancer avec Docker Compose
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+docker compose up --build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Le service expose l'application sur le port `3005` de la machine locale.
 
-## Learn More
+## Deploiement
 
-To learn more about Next.js, take a look at the following resources:
+Workflow recommande avant push GitHub:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Verifier la qualite du code: `npm run lint`
+2. Verifier le build de prod: `npm run build`
+3. Verifier les fichiers a publier: `git status` puis `git add` cible
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Backlink
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ce depot supporte le site Sudoku publie ici: [https://sudoku.arthurp.fr](https://sudoku.arthurp.fr)

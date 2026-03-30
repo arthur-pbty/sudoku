@@ -1,0 +1,10 @@
+services:
+  sudoku-app:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: sh -c "npm install && npm run build && npm start"
+    ports:
+      - "3005:3000"
+    restart: unless-stopped
